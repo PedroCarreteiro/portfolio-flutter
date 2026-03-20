@@ -96,7 +96,7 @@ class Pessoal extends StatelessWidget {
                           ),
 
                           SizedBox(
-                            width: 140,
+                            width: 137,
                           ),
 
 
@@ -130,6 +130,90 @@ class Pessoal extends StatelessWidget {
                 color: AppColors.lightGold,
                 borderRadius: BorderRadius.circular(20.0)
               ),
+            ),
+
+            SizedBox(height: 20,),
+
+            Column(
+
+              children: [
+
+                Row(
+
+                  mainAxisAlignment: MainAxisAlignment.start,
+
+                  children: [
+                    SizedBox(width: 60,),
+                    
+                    Text("Hobbies", 
+                      style: 
+                        TextStyle(
+                          color: AppColors.white,
+                          fontSize: 30,
+                        ),
+                    ),
+                  ],
+
+                ),
+
+                SizedBox(height: 20,),
+
+                Row(
+
+                  mainAxisAlignment: MainAxisAlignment.center,
+
+                  children: [
+
+                    SizedBox(width: 60,),
+
+
+                    Text("Leitura",
+                      style: 
+                        TextStyle(
+                          color: AppColors.white,
+                          fontSize: 20,
+                        ),
+                    ),
+
+                    SizedBox(width: 80,),
+
+                    Image.asset("assets/images/livros.png",
+                      width: 180, // Largura desejada
+                      fit: BoxFit.cover,
+                    )
+                  ],
+                ),
+
+                SizedBox(height: 20,),
+
+                Row(
+
+                  mainAxisAlignment: MainAxisAlignment.center,
+
+                  children: [
+
+                    Image.asset("assets/images/nur.png", 
+                      width: 180, // Largura desejada
+                      fit: BoxFit.cover,
+                    ),
+
+                    SizedBox(width: 50,),
+
+                    Text("Automobilismo",
+                      style: 
+                        TextStyle(
+                          color: AppColors.white,
+                          fontSize: 20,
+                        ),
+                    ),
+
+                    SizedBox(width: 10,),
+
+                  ],
+                )
+
+              ],
+
             )
           ],
         ),
