@@ -26,12 +26,12 @@ class Pessoal extends StatelessWidget {
 
               child: Row(
 
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.center,
                 
                 children: [
                   Column(
 
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
                     children: [
 
@@ -46,7 +46,7 @@ class Pessoal extends StatelessWidget {
 
                       Row(
                   
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
                         children: [
                           Icon(
@@ -54,20 +54,28 @@ class Pessoal extends StatelessWidget {
                             color: AppColors.white,
                           ),
 
-                          Text("Pedro Carreteiro", 
+                          SizedBox(
+                            width: 5,
+                          ),
+
+                          Text("Hortolândia - SP", 
                             style: 
                               TextStyle(
                                 color: AppColors.white,
                                 fontSize: 20,
                               ),
                           ),
+
+                          SizedBox(
+                            width: 45,
+                          ),
                         ],
 
                       ),
-
+  
                       Row(
-                  
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        
+                        mainAxisAlignment: MainAxisAlignment.center,
 
                         children: [
                           Icon(
@@ -75,13 +83,23 @@ class Pessoal extends StatelessWidget {
                             color: AppColors.white,
                           ),
 
-                          Text("Pedro Carreteiro", 
+                          SizedBox(
+                            width: 5,
+                          ),
+
+                          Text("Bosch", 
                             style: 
                               TextStyle(
                                 color: AppColors.white,
                                 fontSize: 20,
                               ),
                           ),
+
+                          SizedBox(
+                            width: 140,
+                          ),
+
+
                         ],
 
                       )
@@ -89,12 +107,29 @@ class Pessoal extends StatelessWidget {
                     ],
                   ),
 
+                  SizedBox(width: 30,),
+
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
+
+                    children: [
+                      Image.asset('assets/images/eu.png',)
+                    ]
                   )
                 ],
               ),
 
+            ),
+
+            SizedBox(height: 20,),
+
+            Container(
+              width: MediaQuery.of(context).size.width * 0.80,
+              height: 2,
+              decoration: BoxDecoration(
+                color: AppColors.lightGold,
+                borderRadius: BorderRadius.circular(20.0)
+              ),
             )
           ],
         ),
