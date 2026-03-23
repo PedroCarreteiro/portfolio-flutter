@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/common/appColors.dart';
 import 'package:portfolio/components/baseScaffold.dart';
+import 'package:portfolio/components/lineDivHor.dart';
+import 'package:portfolio/components/lineDivVert.dart';
+import 'package:portfolio/components/linkImg.dart';
+import 'package:portfolio/components/linkText.dart';
+import 'package:portfolio/screens/projetos.dart';
 
 class Pessoal extends StatelessWidget {
   const Pessoal({super.key});
@@ -12,12 +17,12 @@ class Pessoal extends StatelessWidget {
         child: Column(
           children: [
 
-            SizedBox(height: 30,),
+            SizedBox(height: 20,),
 
             Container(
 
               width: MediaQuery.of(context).size.width * 0.85,
-              height: 175,
+              height: 150,
 
               decoration: BoxDecoration(
                 color: AppColors.meediumBlue,
@@ -46,8 +51,6 @@ class Pessoal extends StatelessWidget {
 
                       Row(
                   
-                        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
                         children: [
                           Icon(
                             Icons.location_on,
@@ -123,16 +126,9 @@ class Pessoal extends StatelessWidget {
 
             SizedBox(height: 20,),
 
-            Container(
-              width: MediaQuery.of(context).size.width * 0.80,
-              height: 2,
-              decoration: BoxDecoration(
-                color: AppColors.lightGold,
-                borderRadius: BorderRadius.circular(20.0)
-              ),
-            ),
+            LineDivHor(),
 
-            SizedBox(height: 20,),
+            SizedBox(height: 10,),
 
             Column(
 
@@ -156,7 +152,7 @@ class Pessoal extends StatelessWidget {
 
                 ),
 
-                SizedBox(height: 20,),
+                SizedBox(height: 10,),
 
                 Row(
 
@@ -184,7 +180,7 @@ class Pessoal extends StatelessWidget {
                   ],
                 ),
 
-                SizedBox(height: 20,),
+                SizedBox(height: 10,),
 
                 Row(
 
@@ -197,7 +193,7 @@ class Pessoal extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
 
-                    SizedBox(width: 50,),
+                    SizedBox(width: 40,),
 
                     Text("Automobilismo",
                       style: 
@@ -214,7 +210,173 @@ class Pessoal extends StatelessWidget {
 
               ],
 
+            ),
+
+            SizedBox(height: 20,),
+
+            LineDivHor(),
+
+            SizedBox(height: 20,),
+
+            Column(
+
+              children: [
+
+                Row(
+
+                  mainAxisAlignment: MainAxisAlignment.start,
+
+                  children: [
+                    SizedBox(width: 60,),
+                    
+                    Text("Técnico", 
+                      style: 
+                        TextStyle(
+                          color: AppColors.white,
+                          fontSize: 30,
+                        ),
+                    ),
+                  ],
+
+                ),
+
+                SizedBox(height: 10,),
+
+                Row(
+
+                  mainAxisAlignment: MainAxisAlignment.center,
+
+                  children: [
+
+                    SizedBox(width: 60,),
+
+
+                    Text("Backend",
+                      style: 
+                        TextStyle(
+                          color: AppColors.white,
+                          fontSize: 20,
+                        ),
+                    ),
+
+                    SizedBox(width: 80,),
+
+                    Image.asset("assets/images/techs.png",
+                      width: 180, // Largura desejada
+                      fit: BoxFit.cover,
+                    )
+                  ],
+                ),
+
+                SizedBox(height: 10,),
+
+                Row(
+
+                  mainAxisAlignment: MainAxisAlignment.center,
+
+                  children: [
+
+                    Image.asset("assets/images/arquitetura.png", 
+                      width: 120, // Largura desejada
+                      fit: BoxFit.cover,
+                    ),
+
+                    SizedBox(width: 93,),
+
+                    Text("Arquitetura",
+                      style: 
+                        TextStyle(
+                          color: AppColors.white,
+                          fontSize: 20,
+                        ),
+                    ),
+
+                    SizedBox(width: 0,),
+
+                  ],
+                )
+
+              ],
+
+            ),
+
+            SizedBox(height: 20,),
+
+            LineDivHor(),
+
+            SizedBox(height: 20,),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+
+              children: [
+                Column(
+
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+                  children: [
+
+                    Row(
+
+                      children: [
+                        LinkImg(url: "https://github.com/PedroCarreteiro", image: "assets/images/github.png"),
+                        
+                        SizedBox(
+                          width: 8,
+                        ),
+
+                        LinkText(url: "https://github.com/PedroCarreteiro", text: "PedroCarreteiro"),
+
+                        SizedBox(
+                          width: 45,
+                        ),
+                      ]
+                    ),
+
+                    SizedBox(height: 10,),
+
+                    Row(
+
+                      children: [
+                        LinkImg(url: "https://br.linkedin.com/in/pedro-carreteiro-447917284", image: "assets/images/linkedin.png"),
+                        
+                        SizedBox(
+                          width: 5,
+                        ),
+
+                        LinkText(url: "https://br.linkedin.com/in/pedro-carreteiro-447917284", text: "Pedro Carreteiro"),
+
+                        SizedBox(
+                          width: 45,
+                        ),
+                      ]
+                    )
+                  ],
+                ),
+
+                LineDivVert(),
+
+                SizedBox(
+                  width: 45,
+                ),
+
+                TextButton(onPressed: (){
+                          Navigator.push(context,
+                                        //Navegar para a tela 2 
+                                        MaterialPageRoute(builder: (context) => Projetos())
+                          );
+                        }, 
+                        style: TextButton.styleFrom(
+                          minimumSize: Size(100, 50),
+                          backgroundColor: AppColors.lightGold,
+                          foregroundColor: AppColors.black
+                        ),
+                        child: Text("Projetos",)
+                )
+
+              ],
             )
+
           ],
         ),
       )
