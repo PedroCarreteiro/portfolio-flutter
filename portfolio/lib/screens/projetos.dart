@@ -15,7 +15,7 @@ class Projetos extends StatelessWidget {
   Widget build(BuildContext context) {
     return BaseScaffold(
       body: Center(
-        child: Column(
+        child: ListView(
           children: [
 
             SizedBox(height: 30,),
@@ -75,7 +75,7 @@ class Projetos extends StatelessWidget {
                         LinkText(url: "https://github.com/PedroCarreteiro", text: "PedroCarreteiro"),
 
                         SizedBox(
-                          width: 45,
+                          width: MediaQuery.of(context).size.width * 0.10,
                         ),
                       ]
                     ),
@@ -94,7 +94,7 @@ class Projetos extends StatelessWidget {
                         LinkText(url: "https://br.linkedin.com/in/pedro-carreteiro-447917284", text: "Pedro Carreteiro"),
 
                         SizedBox(
-                          width: 45,
+                          width: MediaQuery.of(context).size.width * 0.10,
                         ),
                       ]
                     )
@@ -104,7 +104,7 @@ class Projetos extends StatelessWidget {
                 LineDivVert(),
 
                 SizedBox(
-                  width: 45,
+                  width: MediaQuery.of(context).size.width * 0.10,
                 ),
 
                 TextButton(onPressed: (){

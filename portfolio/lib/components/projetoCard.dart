@@ -107,7 +107,7 @@ class _ProjetoCardState extends State<ProjetoCard> {
               mainAxisAlignment: MainAxisAlignment.center,
 
               children: [
-                Image.asset(widget.imagem,)
+                Image.asset(widget.imagem, width: MediaQuery.of(context).size.width * 0.25,)
               ]
             )
           ],

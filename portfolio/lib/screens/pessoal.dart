@@ -14,7 +14,7 @@ class Pessoal extends StatelessWidget {
   Widget build(BuildContext context) {
     return BaseScaffold( 
       body: Center(
-        child: Column(
+        child: ListView(
           children: [
 
             SizedBox(height: 20,),
@@ -110,8 +110,6 @@ class Pessoal extends StatelessWidget {
                     ],
                   ),
 
-                  SizedBox(width: 30,),
-
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
 
@@ -128,7 +126,7 @@ class Pessoal extends StatelessWidget {
 
             LineDivHor(),
 
-            SizedBox(height: 10,),
+            SizedBox(height: 20,),
 
             Column(
 
@@ -139,7 +137,7 @@ class Pessoal extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
 
                   children: [
-                    SizedBox(width: 60,),
+                    SizedBox(width: 20,),
                     
                     Text("Hobbies", 
                       style: 
@@ -156,12 +154,11 @@ class Pessoal extends StatelessWidget {
 
                 Row(
 
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
 
                   children: [
 
-                    SizedBox(width: 60,),
-
+                    SizedBox(width: MediaQuery.of(context).size.width * 0.05,),
 
                     Text("Leitura",
                       style: 
@@ -171,29 +168,24 @@ class Pessoal extends StatelessWidget {
                         ),
                     ),
 
-                    SizedBox(width: 80,),
+                    SizedBox(width: MediaQuery.of(context).size.width * 0.20,),
 
                     Image.asset("assets/images/livros.png",
-                      width: 180, // Largura desejada
+                      width: 200, 
                       fit: BoxFit.cover,
-                    )
+                    ),
                   ],
                 ),
 
-                SizedBox(height: 10,),
+                SizedBox(height: 20,),
 
                 Row(
 
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
 
                   children: [
 
-                    Image.asset("assets/images/nur.png", 
-                      width: 180, // Largura desejada
-                      fit: BoxFit.cover,
-                    ),
-
-                    SizedBox(width: 40,),
+                    SizedBox(width: MediaQuery.of(context).size.width * 0.05,),
 
                     Text("Automobilismo",
                       style: 
@@ -203,8 +195,12 @@ class Pessoal extends StatelessWidget {
                         ),
                     ),
 
-                    SizedBox(width: 10,),
+                    SizedBox(width: MediaQuery.of(context).size.width * 0.10,),
 
+                    Image.asset("assets/images/nur.png", 
+                      width: 150, 
+                      fit: BoxFit.cover,
+                    ),
                   ],
                 )
 
@@ -227,7 +223,7 @@ class Pessoal extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
 
                   children: [
-                    SizedBox(width: 60,),
+                    SizedBox(width: 20,),
                     
                     Text("Técnico", 
                       style: 
@@ -244,13 +240,12 @@ class Pessoal extends StatelessWidget {
 
                 Row(
 
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
 
                   children: [
-
-                    SizedBox(width: 60,),
-
-
+                    
+                    SizedBox(width: MediaQuery.of(context).size.width * 0.05,),
+                    
                     Text("Backend",
                       style: 
                         TextStyle(
@@ -259,29 +254,24 @@ class Pessoal extends StatelessWidget {
                         ),
                     ),
 
-                    SizedBox(width: 80,),
+                    SizedBox(width: MediaQuery.of(context).size.width * 0.20,),
 
                     Image.asset("assets/images/techs.png",
-                      width: 180, // Largura desejada
+                      width: 150, 
                       fit: BoxFit.cover,
-                    )
+                    ),
                   ],
                 ),
 
-                SizedBox(height: 10,),
+                SizedBox(height: 20,),
 
                 Row(
 
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
 
                   children: [
 
-                    Image.asset("assets/images/arquitetura.png", 
-                      width: 120, // Largura desejada
-                      fit: BoxFit.cover,
-                    ),
-
-                    SizedBox(width: 93,),
+                    SizedBox(width: MediaQuery.of(context).size.width * 0.05,),
 
                     Text("Arquitetura",
                       style: 
@@ -291,8 +281,12 @@ class Pessoal extends StatelessWidget {
                         ),
                     ),
 
-                    SizedBox(width: 0,),
+                    SizedBox(width: MediaQuery.of(context).size.width * 0.20,),
 
+                    Image.asset("assets/images/arquitetura.png", 
+                      width: 100, 
+                      fit: BoxFit.cover,
+                    ),
                   ],
                 )
 
@@ -328,7 +322,7 @@ class Pessoal extends StatelessWidget {
                         LinkText(url: "https://github.com/PedroCarreteiro", text: "PedroCarreteiro"),
 
                         SizedBox(
-                          width: 45,
+                          width: MediaQuery.of(context).size.width * 0.10,
                         ),
                       ]
                     ),
@@ -347,7 +341,7 @@ class Pessoal extends StatelessWidget {
                         LinkText(url: "https://br.linkedin.com/in/pedro-carreteiro-447917284", text: "Pedro Carreteiro"),
 
                         SizedBox(
-                          width: 45,
+                          width: MediaQuery.of(context).size.width * 0.10,
                         ),
                       ]
                     )
@@ -357,7 +351,7 @@ class Pessoal extends StatelessWidget {
                 LineDivVert(),
 
                 SizedBox(
-                  width: 45,
+                  width: MediaQuery.of(context).size.width * 0.10,
                 ),
 
                 TextButton(onPressed: (){
